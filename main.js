@@ -7,7 +7,7 @@ define(function (require, exports, module) {
 	var AppInit             = brackets.getModule("utils/AppInit"),
 		CodeHintManager     = brackets.getModule("editor/CodeHintManager"),
 		LanguageManager     = brackets.getModule("language/LanguageManager" ),
-		MGfuncHint          = require('text!mg-func.txt');
+		MG2funcHint          = require('text!mg2-func.txt');
 
 	var lastLine,
 		lastFileName,
@@ -21,7 +21,7 @@ define(function (require, exports, module) {
 	/**
 	 * @constructor
 	 */
-	function MGhints() {
+	function MG2hints() {
 		this.lastLine = 0;
 		this.lastFileName = "";
 		this.cachedMatches = [];
@@ -46,13 +46,13 @@ define(function (require, exports, module) {
 	 * the given editor context and, in case implicitChar is non- null,
 	 * whether it is appropriate to do so.
 	 */
-	MGhints.prototype.hasHints = function (editor, implicitChar) {
+	MG2hints.prototype.hasHints = function (editor, implicitChar) {
 		this.editor = editor;
 		var cursor = this.editor.getCursorPos();
 
 		// if it is not the same line as the last input - rebuild word list
 		if(cursor.line != this.lastLine){
-			var rawWordList = MGfuncHint.match(this.tokenDefinition);
+			var rawWordList = MG2funcHint.match(this.tokenDefinition);
 			this.cachedWordList = [];
 			for(var i in rawWordList){
 				var word = rawWordList[i]; if(this.cachedWordList.indexOf(word)==-1){
@@ -102,7 +102,7 @@ define(function (require, exports, module) {
 	 * 4. handleWideResults, a boolean (or undefined) that indicates whether
 	 *    to allow result string to stretch width of display.
 	 */
-	MGhints.prototype.getHints = function (implicitChar) {
+	MG2hints.prototype.getHints = function (implicitChar) {
 		var cursor = this.editor.getCursorPos();
 		var lineBeginning = {line:cursor.line,ch:0};
 		var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
@@ -132,7 +132,7 @@ define(function (require, exports, module) {
 	 * Indicates whether the manager should follow hint insertion with an
 	 * additional explicit hint request.
 	 */
-	MGhints.prototype.insertHint = function (hint) {
+	MG2hints.prototype.insertHint = function (hint) {
 		var cursor = this.editor.getCursorPos();
 		var lineBeginning = {line:cursor.line,ch:0};
 		var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
@@ -145,7 +145,7 @@ define(function (require, exports, module) {
 	};
 
 	AppInit.appReady(function () {
-		var mgHints = new MGhints();
-		CodeHintManager.registerHintProvider(mgHints, ["php"], 10);
+		var mg2Hints = new MG2hints();
+		CodeHintManager.registerHintProvider(mg2Hints, ["php"], 10);
 	});
 });

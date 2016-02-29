@@ -1,12 +1,12 @@
 {
-  "name": "brackets-mg-functions-hint",
-  "title": "Magento Hint",
+  "name": "brackets-mg2-functions-hint",
+  "title": "Magento 2 Hint",
   "engines": { "brackets": ">=1.2.0" },
-  "description": "Ideal for developing Magento themes, get hints of the main functions, classes and methods.",
-  "homepage": "https://github.com/rafaelstz/brackets-magento-hint",
-  "version": "1.1.1",
+  "description": "Ideal for developing Magento 2 themes, get hints of the main functions, classes and methods.",
+  "homepage": "https://github.com/rafaelstz/brackets-magento2-hint",
+  "version": "0.1.0",
   "categories": "snippets",
-  "bugs": "https://github.com/zaggino/brackets-magento-hint/issues",
+  "bugs": "https://github.com/rafaelstz/brackets-magento2-hint/issues",
   "author": {
     "name": "Rafael Corrêa Gomes",
     "email": "rafaelcgstz@gmail.com",
@@ -14,10 +14,10 @@
   },
   "repository": {
   "type": "git",
-  "url": "https://github.com/rafaelstz/brackets-magento-hint"
+  "url": "https://github.com/rafaelstz/brackets-magento2-hint"
 } ,
   "license": "MIT",
-  "keywords": ["magento", "magneto", "zend", "php", "hint"],
+  "keywords": ["magento 2", "magneto 2", "zend", "php", "hint"],
   "devDependencies": {
     "grunt": "latest",
     "grunt-contrib-jshint": "latest",
@@ -30,22 +30,22 @@
 	"i18n": ["en", "de", "fr", "it", "es", "pt"],
 	"package-i18n":{
       "en": {
-        "description": "Ideal for developing Magento themes, get hints of the main functions, classes and methods."
+        "description": "Ideal for developing Magento 2 themes, get hints of the main functions, classes and methods."
       },
       "de": {
-        "description": "Ideal für die Entwicklung von Magento themes, bekommen Hinweise auf die wichtigsten Funktionen, Klassen und Methoden."
+        "description": "Ideal für die Entwicklung von Magento 2 themes, bekommen Hinweise auf die wichtigsten Funktionen, Klassen und Methoden."
       },
       "fr": {
-        "description": "Idéal pour le développement de thèmes de Magento, obtenir des indices sur les fonctions principales, classes et méthodes."
+        "description": "Idéal pour le développement de thèmes de Magento 2, obtenir des indices sur les fonctions principales, classes et méthodes."
       },
       "it": {
-        "description": "Ideale per lo sviluppo di temi Magento, ottenere suggerimenti delle funzioni principali, classi e metodi."
+        "description": "Ideale per lo sviluppo di temi Magento 2, ottenere suggerimenti delle funzioni principali, classi e metodi."
       },
       "es": {
-        "description": "Ideal para el desarrollo de temas de Magento, obtener consejos de las principales funciones, clases y métodos."
+        "description": "Ideal para el desarrollo de temas de Magento 2, obtener consejos de las principales funciones, clases y métodos."
       },
       "pt": {
-        "description": "Ideal para desenvolvimento de temas Magento, obtenha sugestões das principais funções, classes e métodos."
+        "description": "Ideal para desenvolvimento de temas Magento 2, obtenha sugestões das principais funções, classes e métodos."
 		}
 	}
 }
